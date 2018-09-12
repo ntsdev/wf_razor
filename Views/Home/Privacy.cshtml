@@ -1,7 +1,131 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
-    ViewData["Sample"] = "Use this page to detail your site's privacy policy.";
+    ViewData["Title"] = "Forms";
+    ViewData["RadioTitle"] = "Radio Buttons";
+    ViewData["RadioDefault"] = "Default";
+    ViewData["RadioDisabled"] = "Disabled Radio";
+    ViewData["RadioActive"] = "Hover and Active";
+    ViewData["RadioSelected"] = "Selected";
+    ViewData["CheckboxTitle"] = "Radio Buttons";
+    ViewData["CheckboxDefault"] = "Default";
+    ViewData["CheckboxDisabled"] = "Disabled Checkbox";
+    ViewData["CheckboxActive"] = "Hover and Active";
+    ViewData["CheckboxSelected"] = "Selected";
+    ViewData["TextEmail"] = "Email";
+    ViewData["TextPassword"] = "Password";
+    ViewData["TextAddress"] = "Address";
+    ViewData["TextCity"] = "City";
+    ViewData["TextZipcode"] = "Zipcode";
+    ViewData["RatingText"] = "Rating";
 }
-<h2>@ViewData["Title"]</h2> 
-<p>@ViewData["Sample"]</p>
+ <link rel="icon" href="@Url.Content("~/images/banner1.svg")"/>
 
+<h2>@ViewData["Title"]</h2> 
+ 
+
+<div class="container">
+         <h5>@ViewData["RadioTitle"]</h5>  
+        <form>
+            <fieldset class="form-group">
+                <div class="row">
+                    <div class="form-check col-sm-3 customradiobutton">
+                        <input class="form-check-input" type="radio" name="gridRadio" id="gridRadios1" value="option1" disabled>
+                        <label class="form-check-label" for="gridRadios1">@ViewData["RadioDefault"]</label>
+                    </div>
+                    <div class="form-check col-sm-3">
+                            <input class="form-check-input" type="radio" name="gridRadio" id="gridRadios2" value="option1" disabled>
+                             <span class="customradiomark"></span>
+                            <label class="form-check-label" for="gridRadios2">
+                            @ViewData["RadioDisabled"]
+                        </label>
+                       
+                    </div>
+                    <div class="form-check col-sm-3">
+                        <input class="form-check-input" type="radio" name="gridRadio" id="gridRadios3" value="option1">
+                        <span class="customradiomark"></span>
+                        <label class="form-check-label" for="gridRadios3">
+                            @ViewData["RadioActive"]                            
+                        </label>
+                    </div>
+                    <div class="form-check col-sm-3 customradiobutton">
+                        <input class="form-check-input" type="radio" name="gridRadio" id="gridRadios4" value="option1" disabled>
+                        <label class="form-check-label" for="gridRadios4">
+                         @ViewData["RadioSelected"]   
+                        </label>
+                    </div> 
+                </div> 
+            </fieldset>
+            <h5 class="col-form-label pt-0">@ViewData["CheckboxTitle"]</h5>
+            <div class="form-group row">
+                <div class="form-check col-sm-3 customcheckboxbutton">
+                    <input class="form-check-input" type="checkbox" id="gridCheck1" disabled>
+
+                    <label class="form-check-label" for="gridCheck1">
+                        @ViewData["CheckboxDefault"]
+                    </label>
+                </div>
+                <div class="form-check col-sm-3">
+                    <input class="form-check-input" type="checkbox" id="gridCheck2" disabled>
+                    <span class="custom_check_box"></span>
+                    <label class="form-check-label" for="gridCheck2">
+                        @ViewData["CheckboxDisabled"]
+                    </label>
+                </div>
+                <div class="form-check col-sm-3">
+                    <input class="form-check-input" type="checkbox" id="gridCheck3">
+                    <span class="custom_check_box"></span>
+                    <label class="form-check-label" for="gridCheck3">
+                        @ViewData["CheckboxActive"]
+                    </label>
+                </div>
+                <div class="form-check col-sm-3 customcheckboxbutton">
+                    <input class="form-check-input" type="checkbox" id="gridCheck4" disabled>
+                    <label class="form-check-label" for="gridCheck4">
+                        @ViewData["CheckboxSelected"]
+                    </label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">@ViewData["TextEmail"]</label>
+                    <input type="email" class="form-control customforms" id="inputEmail4" placeholder="Email">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">@ViewData["TextPassword"]</label>
+                    <input type="password" class="form-control customforms" id="inputPassword4" placeholder="Password">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputAddress">@ViewData["TextAddress"]</label>
+                    <input type="text" class="form-control customforms" id="inputAddress" placeholder="1234 name street">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputCity">@ViewData["TextCity"]</label>
+                    <input type="text" class="form-control customforms" id="inputCity" placeholder="City">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputZip">@ViewData["TextZipcode"]</label>
+                    <input type="text" class="form-control customforms" id="inputZip">
+                </div>
+            </div>
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary custombutton" type="button" id="dropdownMenuButton" data-toggle="dropdown" for="inputState" aria-haspopup="true" aria-expanded="false">
+                            <span class="ratetext">@ViewData["RatingText"]</span>
+                            <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+
+                        </button>
+                        <div class="dropdown-menu scrollbar" id="scrollbar-custom">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                            <a class="dropdown-item" href="#">Link 4</a>
+                            <a class="dropdown-item" href="#">Link 5</a>
+                            <a class="dropdown-item" href="#">Link 6</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    </form>
